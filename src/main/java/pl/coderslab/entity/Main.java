@@ -6,25 +6,28 @@ public class Main {
 
         // Create user
         User user = new User();
-        user.setUserName("garek");
-        user.setEmail("garek@coderslab.pl");
+        user.setUserName("kganarek");
+        user.setEmail("kganrek@coderslab.pl");
         user.setPassword("Sapporo2022");
         userDao.create(user);
 
         // Read user
         User readUser = userDao.read(user.getId());
         System.out.println(readUser);
-//
-//        // Update user
-//        user.setUserName("Arkadiusz");
-//        user.setEmail("arek.update@coderslab.pl");
-//        user.setPassword("newpassword");
-//        userDao.update(user);
-//
-//        // Delete user
-//        userDao.delete(user.getId());
-//    }
+
+        // Update user
+        user.setUserName("Arkadiusz");
+        user.setEmail("arek.update@coderslab.pl");
+        user.setPassword("newpassword");
+        userDao.update(user);
+
+        // Delete user
+        userDao.delete(user.getId());
+
+//        userDao.findAll();
 
     }
+
 }
+
 
